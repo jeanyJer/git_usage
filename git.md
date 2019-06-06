@@ -19,3 +19,5 @@
 ######list all local and remote branch
     git branch -a
     
+######切换到上一个分支
+    git checkout - 【只会在两个分支之间来回切换，不能追溯更远】
