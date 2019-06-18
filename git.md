@@ -74,7 +74,7 @@
         
         
         
-        
+        add test for fast forward merge
         
         
 ###reset and revert
