@@ -46,7 +46,6 @@
     
     
 ###fetch and pull
-
     
     
 ###merge and rebase
@@ -86,9 +85,4 @@
         
         
 ###reset and revert
-    
-    
-    
-    
-    
     
