@@ -13,6 +13,19 @@
     Remote --pull --> workspace
     
     
+###branch/commit/heand
+    一个git仓库只有一个head, head指向当前的branch（当前是哪个分支，head就指向哪个分支）；branch指向自己分支最新的commit。
+    
+    eg:
+        head --> master --> last commit on master
+        
+        git checkout dev =====>    head --> dev --> last commit on dev
+        
+        git checkout master ==>    head --> master --> last commit on master
+        
+        git merge dev ========>    head --> master --> last commit on master after merge
+    
+    
 
 ###branch
 ######新建并切换分支
@@ -33,6 +46,7 @@
     
     
 ###fetch and pull
+
     
     
 ###merge and rebase
@@ -69,12 +83,6 @@
     fast forward模式
         git merge 会默认使用 fast forward模式进行合并。当删除合并的分支之后，会丢掉分支的信息。
         使用git merge --no-ff -m "this is a message for merging branch1" branch1
-        
-        
-        
-        
-        
-        add test for fast forward merge
         
         
 ###reset and revert
