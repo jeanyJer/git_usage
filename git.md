@@ -9,4 +9,12 @@
     branch2分支只显示commit 0995682972493164fb6f8f972a65ccf31d00c448及之前的代码。
     
 
-just test for fast forward
+
+
+
+
+
+
+
+
+this is a test for fast forward merge
