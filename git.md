@@ -46,6 +46,9 @@
     
     
 ###fetch and pull
+    fetch: 从remote获取最新版本到本地，不会自动merge
+    
+    git pull origin branch1 ===> git fetch origin branch1  +  git merge origin/branch1
     
     
 ###merge and rebase
@@ -80,9 +83,10 @@
         ***git pull 内置执行merge   --> git pull --rebase 执行rebase
         
     fast forward模式
-        git merge 会默认使用 fast forward模式进行合并。当删除合并的分支之后，会丢掉分支的信息。
+        git merge 会默认使用 fast forward模式进行合并。当删除合并的分支之后，会丢掉分支的信息(commit信息还在)。
         使用git merge --no-ff -m "this is a message for merging branch1" branch1
         
         
 ###reset and revert
+
     
