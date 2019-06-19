@@ -35,19 +35,22 @@
 ###branch
 ######新建并切换分支
     git checkout -b branch1 == git branch branch1 + git checkout branch1
-    
-######list all remote branch
-    git branch -r
-    
-######list all local and remote branch
-    git branch -a
-    
-######切换到上一个分支
-    git checkout - 【只会在两个分支之间来回切换，不能追溯更远】
+
+######git checkout -
+     切换到上一个分支【只会在两个分支之间来回切换，不能追溯更远】
     
 ######新建branch2，并指向commit
     git branch branch2 0995682972493164fb6f8f972a65ccf31d00c448
     branch2分支只显示commit 0995682972493164fb6f8f972a65ccf31d00c448及之前的代码。
+    
+######git branch --track branch2 origin/branch1
+    新建一个本地分支branch2，与已经存在的指定远程分支origin/branch1建立追踪关系
+    
+######git branch --set-upstream branch1 origin/master
+    The --set-upstream flag is deprecated and will be removed. Consider using --track or --set-upstream-to
+    建立追踪关系，在现有分支与指定的远程分支之间.
+    
+    
     
     
 ###merge and rebase
