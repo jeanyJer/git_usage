@@ -91,8 +91,20 @@
         
         
 ###reset and revert
-
-
+######git reset (修改HEAD的位置，将HEAD指向的位置改变为之前存在的某个版本, 被撤销的commit不再保留)
+    git reset HEAD 将暂存区的内容撤回到工作区
+    git reset HEAD^ = git reset HEAD~1 = git reset previous_commit_id 撤回最新一个提交，并保留修改内容在工作区
+    
+    git reset --hard commit_id 撤销到并包括'commit_id'那次提交，并且不保留撤销区间的修改内容
+    git reset --hard commit_id ==> git reset commit_id + git checkout <files>
+    
+    由于本地的HEAD指向比远程库的要旧，所以此时push 需要使用-force.
+    
+######git revert (创建一个新的版本，这个版本的内容与要回退的目标版本一样，HEAD指向新生成的版本)
+    git revert HEAD 撤销最新一次提交
+    git revert HEAD^ 撤销最新两次提交
+    
+    git revert commit_id 回到commit_id'那次提交之前的版本
 
 ###remote
 ######git remote / git remote -v/ git remote show <主机名>
