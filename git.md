@@ -46,9 +46,10 @@
 ######git branch --track branch2 origin/branch1
     新建一个本地分支branch2，与已经存在的指定远程分支origin/branch1建立追踪关系
     
-######git branch --set-upstream branch1 origin/master
-    The --set-upstream flag is deprecated and will be removed. Consider using --track or --set-upstream-to
-    建立追踪关系，在现有分支与指定的远程分支之间.
+######git branch --set-upstream branch1 origin/master ==> git branch --set-upstream-to=origin/master branch1
+    equal to: git checkout branch1 + git branch --set-upstream-to=origin/master
+    在现有分支branch1与指定的远程分支origin/master之间建立追踪关系。
+    
     
     
     
