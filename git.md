@@ -50,10 +50,10 @@
     equal to: git checkout branch1 + git branch --set-upstream-to=origin/master
     在现有分支branch1与指定的远程分支origin/master之间建立追踪关系。
     
-    
-    
-    
-    
+######git branch --unset-upstream branch1 
+    equal to: git checkout branch1 + git branch --unset-upstream
+    取消本地分支branch1的追踪关系。
+       
 ###merge and rebase
 ####git merge
     merge branch2 to branch1
