@@ -26,6 +26,11 @@
         git merge dev ========>    head --> master --> last commit on master after merge
     
     
+###fetch and pull
+    fetch: 从remote获取最新版本到本地，不会自动merge
+    
+    git pull origin branch1 ===> git fetch origin branch1  +  git merge origin/branch1
+    
 
 ###branch
 ######新建并切换分支
@@ -43,12 +48,6 @@
 ######新建branch2，并指向commit
     git branch branch2 0995682972493164fb6f8f972a65ccf31d00c448
     branch2分支只显示commit 0995682972493164fb6f8f972a65ccf31d00c448及之前的代码。
-    
-    
-###fetch and pull
-    fetch: 从remote获取最新版本到本地，不会自动merge
-    
-    git pull origin branch1 ===> git fetch origin branch1  +  git merge origin/branch1
     
     
 ###merge and rebase
@@ -88,5 +87,33 @@
         
         
 ###reset and revert
+
+
+
+###remote
+######git remote / git remote -v/ git remote show <主机名>
+    查看远程主机/ 查看远程主机网址信息/ 查看主机详细信息
+    
+######git remote add <主机名> <网址>
+    添加远程主机
+    
+######git remote rename <old> <new>
+    修改远程主机的名字
+    
+    
+
+###push
+######git push origin branch1
+    将本地分支推送到与之存在追踪关系的origin远程主机的分支branch1；如果该远程分支不存在，则会被新建
+    
+######git push origin
+    将本地分支推送到与之存在追踪关系的origin远程主机的对应分支(通常两者同名)
+    如果当前分支只有一个追踪关系，则可以省略远程主机名，使用 git push
+    
+######git push -u origin branch1
+    如果当前分支与多个远程主机存在追踪关系，可以使用-u指定一个默认主机，之后就可以直接使用'git push'
+    
+    
+    
 
     
