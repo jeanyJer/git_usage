@@ -13,7 +13,7 @@
     Remote --pull --> workspace
     
     
-###branch/commit/heand
+###branch/commit/head
     一个git仓库只有一个head, head指向当前的branch（当前是哪个分支，head就指向哪个分支）；branch指向自己分支最新的commit。
     
     eg:
@@ -45,7 +45,7 @@
     
 ######git branch --track branch2 origin/branch1
     新建一个本地分支branch2，与已经存在的指定远程分支origin/branch1建立追踪关系
-    
+
 ######git branch --set-upstream branch1 origin/master ==> git branch --set-upstream-to=origin/master branch1
     equal to: git checkout branch1 + git branch --set-upstream-to=origin/master
     在现有分支branch1与指定的远程分支origin/master之间建立追踪关系。
@@ -60,7 +60,7 @@
     会在branch1上生成一个新的merge commit来完成代码的合并工作；并且在branch1看到被merge的branch2分支线；所有分支的commit都按照时间线往前走。
     
 ####git rebase（变基命令）
-    rebase branch1 to matser
+    rebase branch1 to master
     会把branch1的commit放到master的最后面（叫做变基）；master的commit线上可以看到branch1的commit；时间线会被rebase过来的commit打乱。
     
     【原理：rebase需要基于一个分支来设置你当前的分支的基线，这基线就是当前分支的开始时间轴向后移动到最新的跟踪分支的最后面，这样你的当前分支就是最新的跟踪分支。】
@@ -86,7 +86,7 @@
         ***git pull 内置执行merge   --> git pull --rebase 执行rebase
         
     fast forward模式
-        git merge 会默认使用 fast forward模式进行合并。当删除合并的分支之后，会丢掉分支的信息(commit信息还在)。
+        git merge 会默认使用 fast forward模式进行合并。当删除合并的分支之后，会丢掉分支的信息。
         使用git merge --no-ff -m "this is a message for merging branch1" branch1
         
         
@@ -128,8 +128,6 @@
     
 ######git push -u origin branch1
     如果当前分支与多个远程主机存在追踪关系，可以使用-u指定一个默认主机，之后就可以直接使用'git push'
-    
-    
     
 
     
