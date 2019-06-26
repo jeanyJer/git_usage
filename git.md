@@ -50,10 +50,10 @@
     equal to: git checkout branch1 + git branch --set-upstream-to=origin/master
     在现有分支branch1与指定的远程分支origin/master之间建立追踪关系。
     
-######git branch --unset-upstream branch1 
+######git branch --unset-upstream branch1
     equal to: git checkout branch1 + git branch --unset-upstream
     取消本地分支branch1的追踪关系。
-       
+
 ###merge and rebase
 ####git merge
     merge branch2 to branch1
@@ -91,6 +91,7 @@
         
         
 ###reset and revert
+<<<<<<< HEAD
 ######git reset (修改HEAD的位置，将HEAD指向的位置改变为之前存在的某个版本, 被撤销的commit不再保留)
     git reset HEAD 将暂存区的内容撤回到工作区
     git reset HEAD^ = git reset HEAD~1 = git reset previous_commit_id 撤回最新一个提交，并保留修改内容在工作区
@@ -128,6 +129,3 @@
     
 ######git push -u origin branch1
     如果当前分支与多个远程主机存在追踪关系，可以使用-u指定一个默认主机，之后就可以直接使用'git push'
-    
-
-    
